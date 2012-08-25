@@ -12,7 +12,9 @@
  * */
 header("Content-Type: application/json");
 $xml = new DOMDocument();
-$xml->loadXML(file_get_contents("http://velhop.strasbourg.eu/tvcstations.xml"));
+$xml->string=file_get_contents("http://velhop.strasbourg.eu/tvcstations.xml");
+header("Etag: ".md5($xml->string));
+$xml->loadXML($xml->string);
 $xml=$xml->documentElement;
 $xml=$xml->childNodes->item(0);
 for ($i=1; $i<$xml->childNodes->length; $i++) {
