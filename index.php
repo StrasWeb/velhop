@@ -14,6 +14,7 @@ header("Content-Type: text/html; charset=utf-8");
 require_once "dom-enhancer/XMLDocument.php";
 $doc=new DOMenhancer_XMLDocument("Vélhop", true);
 $dom=$doc->DOM;
+$dom->html->setAttribute("lang", "fr");
 
 //<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
 $dom->head->addElement(
