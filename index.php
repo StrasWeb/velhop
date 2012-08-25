@@ -24,6 +24,7 @@ $dom->head->addElement(
 
 //<div id="mapdiv"></div>
 $dom->body->addElement("div", null, array("id"=>"mapdiv", "class"=>"map"));
+$dom->body->addElement("footer", "Données fournies par la Compagnie des Transports Strasbourgeois");
 $dom->body->addElement("script", null, array("src"=>"script.js", "async"=>"async"));
 
 
