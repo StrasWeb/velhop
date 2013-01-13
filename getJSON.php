@@ -11,7 +11,6 @@
  * @link     http://svn.strasweb.fr
  * */
 header("Content-Type: application/json");
-header('Access-Control-Allow-Origin: *');
 $xml = new DOMDocument();
 $xml->string=file_get_contents("http://velhop.strasbourg.eu/tvcstations.xml");
 header("Etag: ".md5($xml->string));
