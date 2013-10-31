@@ -11,6 +11,7 @@
     "icons": {
         "32": "/32px-GreenButton_RightArrow.svg.png",
         "60": "/60px-GreenButton_RightArrow.svg.png",
+        "90": "/90px-GreenButton_RightArrow.svg.png",
         "128": "/128px-GreenButton_RightArrow.svg.png",
         "256": "/256px-GreenButton_RightArrow.svg.png"
     },
