@@ -1,13 +1,11 @@
-/*global OpenLayers*/
+/*global L*/
 /*jslint browser: true */
 window.addEventListener('load', function () {
     'use strict';
-    var map = new OpenLayers.Map("mapdiv"), lonLat = new OpenLayers.LonLat(7.750576, 48.58476).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()), zoom = 15, markers = new OpenLayers.Layer.Markers(), client = new XMLHttpRequest();
-    map.addLayer(new OpenLayers.Layer.OSM());
-
-    map.addLayer(markers);
-
-    map.setCenter(lonLat, zoom);
+    var map = L.map('mapdiv').setView([48.58476, 7.750576], 15), client = new XMLHttpRequest(), markers = L.layerGroup(), polyline = L.polyline([[48.58476, 7.750576]]);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors<br/>Donn&eacute;es fournies par la Compagnie des Transports Strasbourgeois'
+    }).addTo(map);
 
     function handler(e) {
         if (e.target.readyState === e.target.DONE) {
@@ -16,10 +14,11 @@ window.addEventListener('load', function () {
                 var nodes, i;
                 nodes = JSON.parse(e.target.response);
                 for (i = 0; i < nodes.length; i += 1) {
-                    lonLat = new OpenLayers.LonLat(nodes[i].long, nodes[i].lat);
-                    markers.addMarker(new OpenLayers.Marker(lonLat.transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject())));
-                    map.addPopup(new OpenLayers.Popup.FramedCloud(null, lonLat, null, "<b>" + nodes[i].name + "</b><br/>" + nodes[i].current + "/" + nodes[i].max, null, false));
+                    markers.addLayer(L.marker([nodes[i].lat, nodes[i].long]).addTo(map).bindPopup("<b>" + nodes[i].name + "</b><br/>" + nodes[i].current + "/" + nodes[i].max));
+                    polyline.addLatLng([nodes[i].lat, nodes[i].long]);
                 }
+                markers.addTo(map);
+                map.fitBounds(polyline.getBounds());
             }
         }
     }
