@@ -10,7 +10,7 @@
     },
     "icons": {
         "32": "/32px-GreenButton_RightArrow.svg.png"
-    }
+    },
     "default_locale": "fr",
     "launch_path": "/index.html"
 }
