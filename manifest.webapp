@@ -1,0 +1,12 @@
+{
+    "name": "Vélhop",
+    "developer": {
+        "name": "StrasWeb",
+        "url": "https://strasweb.fr/"
+    },
+    "chrome": {
+        "navigation": true
+    },
+    "default_locale": "fr",
+    "launch_path": "/index.html"
+}
