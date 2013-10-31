@@ -1,6 +1,6 @@
 {
     "name": "Vélhop",
-    "Description": "Emplacement des stations Vélhop à Strasbourg",
+    "description": "Emplacement des stations Vélhop à Strasbourg",
     "developer": {
         "name": "StrasWeb",
         "url": "https://strasweb.fr/"
@@ -9,7 +9,10 @@
         "navigation": true
     },
     "icons": {
-        "32": "/32px-GreenButton_RightArrow.svg.png"
+        "32": "/32px-GreenButton_RightArrow.svg.png",
+        "60": "/60px-GreenButton_RightArrow.svg.png",
+        "128": "/128px-GreenButton_RightArrow.svg.png",
+        "256": "/256px-GreenButton_RightArrow.svg.png"
     },
     "default_locale": "fr",
     "launch_path": "/index.html"
