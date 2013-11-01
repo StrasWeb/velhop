@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+  version="1.0" viewmodes="fullscreen" id="http://velhop.strasweb.fr/">
+     <icon src="256px-GreenButton_RightArrow.svg.png"/>
+     <content src="index.html"/>
+     <name>Vélhop</name>
+</widget>

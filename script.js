@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
 
     client = new XMLHttpRequest();
     client.onreadystatechange = handler;
-    client.open("GET", "getJSON.php");
+    client.open("GET", "http://velhop.strasweb.fr//getJSON.php");
     client.send();
 }, false);
 
