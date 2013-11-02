@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
-  version="1.0" viewmodes="fullscreen" id="http://velhop.strasweb.fr/">
-     <icon src="256px-GreenButton_RightArrow.svg.png"/>
-     <content src="index.html"/>
-     <name>Vélhop</name>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://velhop.strasweb.fr/" version="1.0.0" viewmodes="fullscreen">
+    <tizen:application id="6rWRu4MZsV.Vélhop" package="6rWRu4MZsV" required_version="2.2"/>
+    <content src="index.html"/>
+    <icon src="256px-GreenButton_RightArrow.svg.png"/>
+    <name>Vélhop</name>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+      
+      
 </widget>
