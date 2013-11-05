@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors<br/>Donn&eacute;es fournies par la <abbr title="Compagnie des Transports Strasbourgeois">CTS</abbr>'
     }).addTo(map);
+    map.attributionControl.setPrefix('');
 
     function handler(e) {
         if (e.target.readyState === e.target.DONE) {
