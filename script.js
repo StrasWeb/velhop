@@ -4,8 +4,8 @@ window.addEventListener('load', function () {
     'use strict';
     var map = L.map('mapdiv').setView([48.58476, 7.750576], 15), client = new XMLHttpRequest(), markers = L.layerGroup(), polyline = L.polyline([[48.58476, 7.750576]]);
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors<br/>Donn&eacute;es fournies par la <abbr title="Compagnie des Transports Strasbourgeois">CTS</abbr>',
-        'detectRetina': true
+        attribution: 'Donn&eacute;es fournies par la <abbr title="Compagnie des Transports Strasbourgeois">CTS</abbr><br/>&nbsp;',
+        detectRetina: true
     }).addTo(map);
     map.attributionControl.setPrefix('');
 
